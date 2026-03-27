@@ -1,1 +1,337 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fonctionnement des salles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+            font-size: 18px;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 60px;
+            margin-bottom: 25px;
+        }
+
+        .photo {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            margin-top: 25px;
+            color: #0d47a1;
+        }
+
+        .section {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2196f3;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .top-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 12px;
+            background: #2196f3;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .top-link:hover {
+            background: #0d47a1;
+        }
+
+        /* État du matériel */
+        .check-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        .check-item button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .check-item button:first-of-type {
+            background: #4caf50;
+            color: white;
+        }
+
+        .check-item button:last-of-type {
+            background: #f44336;
+            color: white;
+        }
+
+        .result {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        /* --- STYLE DU BLOC TECHNICIEN --- */
+        #btnModifs {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, #dcdcdc, #f5f5f5);
+            border-radius: 8px;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.25s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        #btnModifs:hover {
+            transform: scale(1.03);
+            background: linear-gradient(135deg, #cfcfcf, #e9e9e9);
+        }
+
+        #arrow {
+            transition: transform 0.3s ease;
+        }
+
+        #modifs {
+            margin-top: 10px;
+            padding: 12px;
+            background: #fafafa;
+            border-left: 4px solid #888;
+            border-radius: 6px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #saveBtn {
+            display: none;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #0d47a1;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #saveBtn:hover {
+            background: #08306b;
+        }
+    </style>
+</head>
+<body>
+
+<a id="haut"></a>
+
+<div class="container">
+
+    <h1>FONCTIONNEMENT DES SALLES</h1>
+
+    <div class="logo">🖥️</div>
+
+    <img src="salle.png" alt="Photo de la salle" class="photo">
+
+    <!-- SOMMAIRE -->
+    <h2>Sommaire</h2>
+    <ul>
+        <li><a href="#etape1">Étape 1 — Ordinateur</a></li>
+        <li><a href="#etape2">Étape 2 — Vidéoprojecteur / Télé</a></li>
+        <li><a href="#problemes">En cas de problème</a></li>
+        <li><a href="#etat">État du matériel</a></li>
+        <li><a href="#maj">Dernières modifications</a></li>
+    </ul>
+
+    <!-- ÉTAPE 1 -->
+    <div class="section" id="etape1">
+        <h2>ÉTAPE 1 — Ordinateur</h2>
+        <ul>
+            <li>Allumer l’ordinateur (maintenir le bouton Power quelques secondes).</li>
+            <li>Mot de passe intervenant : <strong>Irabastia2021</strong></li>
+            <li>Vérifier que le câble Ethernet est bien branché pour accéder au réseau IRA.</li>
+        </ul>
+        <a href="#haut" class="top-link">⬆ Retour en haut</a>
+    </div>
+
+    <!-- ÉTAPE 2 -->
+    <div class="section" id="etape2">
+        <h2>ÉTAPE 2 — Vidéoprojecteur / Télé</h2>
+
+        <h3>Télé (si présente dans la salle)</h3>
+        <ul>
+            <li>Allumer la télé avec la télécommande.</li>
+            <li>Aller sur l’application “PC”.</li>
+            <li>Vérifier le câble HDMI.</li>
+        </ul>
+
+        <h3>Vidéoprojecteur</h3>
+        <ul>
+            <li>Allumer manuellement ou avec la télécommande.</li>
+            <li>Appuyer 2 fois sur Power.</li>
+            <li>Vérifier le câble HDMI.</li>
+        </ul>
+
+        <a href="#haut" class="top-link">⬆ Retour en haut</a>
+    </div>
+
+    <!-- EN CAS DE PROBLÈME -->
+    <div class="section" id="problemes">
+        <h2>EN CAS DE PROBLÈME</h2>
+        <ul>
+            <li>Pas d’image : utiliser <strong>Windows + K</strong>.</li>
+            <li>Vérifier HDMI + source.</li>
+            <li>Pas de réseau : vérifier le câble Ethernet.</li>
+            <li>Vidéoprojecteur : appuyer 2 fois sur Power.</li>
+            <li>Télécommande : viser l’appareil.</li>
+        </ul>
+        <a href="#haut" class="top-link">⬆ Retour en haut</a>
+    </div>
+
+    <!-- ÉTAT DU MATÉRIEL -->
+    <div class="section" id="etat">
+        <h2>ÉTAT DU MATÉRIEL</h2>
+
+        <div class="check-item">
+            Vidéoprojecteur/télé :
+            <button onclick="reponse(this, true)">Oui</button>
+            <button onclick="reponse(this, false)">Non</button>
+            <p class="result"></p>
+        </div>
+
+        <div class="check-item">
+            Télécommande :
+            <button onclick="reponse(this, true)">Oui</button>
+            <button onclick="reponse(this, false)">Non</button>
+            <p class="result"></p>
+        </div>
+
+        <div class="check-item">
+            Réseau / Internet :
+            <button onclick="reponse(this, true)">Oui</button>
+            <button onclick="reponse(this, false)">Non</button>
+            <p class="result"></p>
+        </div>
+
+        <a href="#haut" class="top-link">⬆ Retour en haut</a>
+    </div>
+
+    <!-- DERNIÈRES MODIFICATIONS (MODIFIABLE + SAUVEGARDE) -->
+    <div class="section" id="maj">
+        <h2>DERNIÈRES MODIFICATIONS</h2>
+
+        <div id="btnModifs">
+            <span>Accès technicien</span>
+            <span id="arrow">▼</span>
+        </div>
+
+        <div id="modifs">
+            <p id="modifText" contenteditable="false">
+                • 12/03/2026 : Ajout d’un câble HDMI.<br>
+                • 05/02/2026 : Télécommande remplacée.<br>
+                • 28/01/2026 : Mise à jour du mot de passe.<br>
+            </p>
+
+            <button id="saveBtn">💾 Enregistrer</button>
+        </div>
+
+        <a href="#haut" class="top-link">⬆ Retour en haut</a>
+    </div>
+
+</div>
+
+<script>
+function reponse(element, ok) {
+    let message = ok 
+        ? "✔️ Tout fonctionne correctement."
+        : "❌ Contacter le service technique : 06 00 00 00 00";
+
+    element.parentElement.querySelector(".result").textContent = message;
+}
+
+/* --- CHARGEMENT DES MODIFICATIONS SAUVEGARDÉES --- */
+window.onload = function() {
+    let saved = localStorage.getItem("modifs");
+    if (saved) {
+        document.getElementById("modifText").innerHTML = saved;
+    }
+};
+
+/* --- SCRIPT DU BLOC TECHNICIEN --- */
+let ouvert = false;
+
+document.getElementById("btnModifs").onclick = function() {
+    if (!ouvert) {
+        let mdp = prompt("Mot de passe technicien :");
+        if (mdp !== "20200Bastia@") {
+            alert("Accès refusé");
+            return;
+        }
+    }
+
+    ouvert = !ouvert;
+
+    let bloc = document.getElementById("modifs");
+    let arrow = document.getElementById("arrow");
+    let text = document.getElementById("modifText");
+    let saveBtn = document.getElementById("saveBtn");
+
+    if (ouvert) {
+        bloc.style.maxHeight = "500px";
+        arrow.style.transform = "rotate(180deg)";
+        text.contentEditable = "true";
+        saveBtn.style.display = "block";
+    } else {
+        bloc.style.maxHeight = "0";
+        arrow.style.transform = "rotate(0deg)";
+        text.contentEditable = "false";
+        saveBtn.style.display = "none";
+    }
+};
+
+/* --- SAUVEGARDE --- */
+document.getElementById("saveBtn").onclick = function() {
+    let content = document.getElementById("modifText").innerHTML;
+    localStorage.setItem("modifs", content);
+    alert("Modifications enregistrées !");
+};
+</script>
+
+</body>
+</html>
